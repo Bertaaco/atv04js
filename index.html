@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Frases Criativas</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding-top: 50px; background-color: #f0f8ff; }
+    #resultado { font-size: 24px; color: #2c3e50; font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+<h1>Gerador de Personagem</h1>
+<p>Clique no botão para criar sua frase!</p>
+
+<button onclick="gerarFrase()">Criar Minha Frase</button>
+
+<div id="resultado"></div>
+
+<script>
+  function gerarFrase() {
+    // Captura de dados (Baseado no módulo 3 do PDF)
+    var nome = window.prompt("Qual o seu nome?");
+    var classe = window.prompt("Qual a sua classe?");
+    var habilidade = window.prompt("Qual o seu superpoder ou habilidade?");
+
+    // Processamento: concatenação de strings
+    var fraseFinal = "O lendário " + nome + " da classe " +
+                      classe + " é muito bom em " + habilidade + "!";
+
+    // Saída de dados manipulando o HTML
+    document.getElementById("resultado").innerText = fraseFinal;
+  }
+</script>
+
+</body>
+</html>
